@@ -39,11 +39,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <h2>Chart Presentation</h2>
         <Chart
           data={this.playerCountByCountries()}
           xAxisDataKey="country"
           barDataKey="count"
         />
+        <h2>Player List with Country Name</h2>
         {this.state.players.map((player) => (
           <PlayerCard key={player.id} {...player} />
         ))}

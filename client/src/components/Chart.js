@@ -15,7 +15,7 @@ const Chart = (props) => {
 
   class CustomizedAxisTick extends PureComponent {
     render() {
-      const { x, y, stroke, payload } = this.props;
+      const { x, y, payload } = this.props;
 
       return (
         <g transform={`translate(${x},${y})`}>
@@ -35,7 +35,7 @@ const Chart = (props) => {
   }
 
   return (
-    <BarChart width={730} height={250} data={data}>
+    <BarChart width={730} height={250} data={data} style={{ marginTop: 20 }}>
       <CartesianGrid strokeDasharray="3 3" />
 
       <XAxis dataKey={xAxisDataKey} tick={<CustomizedAxisTick />} />
